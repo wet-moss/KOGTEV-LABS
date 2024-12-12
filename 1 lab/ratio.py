@@ -14,4 +14,4 @@ def main():
         print(f"Ошибка в программе ratio: {e}", file=sys.stderr)
         
 if __name__ == "__main__":
-main()
+    main()

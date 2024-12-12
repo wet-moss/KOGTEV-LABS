@@ -13,5 +13,5 @@ def main():
     except Exception as e:
         print(f"Ошибка в программе ratio: {e}", file=sys.stderr)
         
-    if __name__ == "__main__":
-    main()
+if __name__ == "__main__":
+main()

@@ -4,13 +4,15 @@ import math
 
 def main():
     try:
-        num = float(input("Введите неотрицательное число: ").strip())
+        line = sys.stdin.readline().strip()
+        if not line:
+            raise ValueError("Нет данных для обработки")  
+        num = float(line)
         if num < 0:
-            raise ValueError("Необходимо ввести неотрицательное число")   
-        sqrt_result = math.sqrt(num) 
+            raise ValueError("Необходимо ввести неотрицательное число")
+        sqrt_result = math.sqrt(num)   
         with open("output.txt", "a") as f:
-            f.write(f"{sqrt_result}\n")
-        
+            f.write(f"{sqrt_result}\n")       
     except ValueError as ve:
         print(f"Ошибка ввода: {ve}", file=sys.stderr)
     except Exception as e:

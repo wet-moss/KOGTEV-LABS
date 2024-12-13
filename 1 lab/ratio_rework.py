@@ -5,8 +5,6 @@ import sys
 def main():
     try:
         line = sys.stdin.readline().strip()
-        if not line:
-            raise ValueError("Нет данных для A")
         A = int(line)
         B = random.randint(-10, 10)
         with open("logs.txt", "a") as log_file:

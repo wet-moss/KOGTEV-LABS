@@ -4,7 +4,7 @@
 2) mkdir 1 lab/ <br>
 <i>Команда для создания папки для лабораторной работы №1.</i>
 
-3) touch randomA_rework.py ratio_rework.py squareRoot_rework.py
+3) touch randomA_rework.py ratio_rework.py squareRoot_rework.py <br>
 <i>Команда для создания файлов для программ.</i>
 
 4) vim randomA_rework.py <br>

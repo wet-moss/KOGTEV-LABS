@@ -16,8 +16,8 @@ def main():
 
     except ValueError as ve:
         print(f"Ошибка ввода: {ve}", file=sys.stderr)
-    except ZeroDivisionError:
-        print(f"Ошибка (деление на ноль)", file=sys.stderr)
+    except ZeroDivisionError as zve:
+        print(f"Ошибка (деление на ноль): {zve}", file=sys.stderr)
     except Exception as e:
         print(f"Произошла ошибка: {e}", file=sys.stderr)
 

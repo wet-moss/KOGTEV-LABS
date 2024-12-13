@@ -5,11 +5,7 @@ import math
 def main():
     try:
         line = sys.stdin.readline().strip()
-        if not line:
-            raise ValueError("Нет данных для обработки")  
         num = float(line)
-        if num < 0:
-            raise ValueError("Необходимо ввести неотрицательное число")
         sqrt_result = math.sqrt(num)   
         with open("output.txt", "a") as f:
             f.write(f"{sqrt_result}\n")       

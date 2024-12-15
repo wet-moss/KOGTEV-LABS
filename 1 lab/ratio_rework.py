@@ -8,10 +8,9 @@ def main():
         A = int(line)
         B = random.randint(-10, 10)
         result = A / B
+        print(result)
         with open("logs.txt", "a") as log_file:
             log_file.write(f"A = {A}, B = {B}, A / B = {result}\n")
-        with open("output.txt", "a") as output_file:
-            output_file.write(f"{result}\n")
     except ZeroDivisionError as zve:
         with open("logs.txt", "a") as log_file:
             log_file.write(f"A = {A}, B = {B}\n")

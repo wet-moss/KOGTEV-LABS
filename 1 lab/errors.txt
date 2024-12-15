@@ -1,0 +1,2 @@
+Ошибка ввода: math domain error
+Ошибка ввода: math domain error

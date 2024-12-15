@@ -7,16 +7,20 @@ def main():
         line = sys.stdin.readline().strip()
         A = int(line)
         B = random.randint(-10, 10)
-        with open("logs.txt", "a") as log_file:
-            log_file.write(f"A={A}, B={B}\n")
         result = A / B
-        print(result)
-
-    except ValueError as ve:
-        print(f"Ошибка ввода: {ve}", file=sys.stderr)
+        with open("logs.txt", "a") as log_file:
+            log_file.write(f"A = {A}, B = {B}, A / B = {result}\n")
+        with open("output.txt", "a") as output_file:
+            output_file.write(f"{result}\n")
     except ZeroDivisionError as zve:
+        with open("logs.txt", "a") as log_file:
+            log_file.write(f"A = {A}, B = {B}\n")
+        with open("errors.txt", "a") as error_file:
+            error_file.write(f"Ошибка (деление на ноль): {zve}\n")
         print(f"Ошибка (деление на ноль): {zve}", file=sys.stderr)
     except Exception as e:
+        with open("errors.txt", "a") as error_file:
+            error_file.write(f"Ошибка: {e}\n")
         print(f"Произошла ошибка: {e}", file=sys.stderr)
 
 if __name__ == "__main__":
